@@ -1,23 +1,23 @@
 package org.danukaji.Bot.Film.Download;
 
+import org.danukaji.Bot.Utilities.Utiles;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.GetFile;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Document;
 import org.telegram.telegrambots.meta.api.objects.File;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.danukaji.Bot.Film.Torrent.DownloadTorrentFiles;
 public class TorrentDownloadBot extends TelegramLongPollingBot {
     private static String torFile;
+    private String chatId;
     @Override
     public String getBotUsername() {
         return "Download";
@@ -32,6 +32,7 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         var msg = update.getMessage();
         System.out.println(msg);
+        chatId = msg.getChatId().toString();
         if(msg != null && msg.hasDocument()){
             System.out.println("Has A File");
             Document document = update.getMessage().getDocument();
@@ -65,15 +66,30 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
                 outputStream.write(buffer, 0, bytesRead);
             }
             System.out.println("File downloaded successfully.");
+            outputStream.close();
             DownloadTorrentFiles downloadTorrentFiles = new DownloadTorrentFiles();
             downloadTorrentFiles.DownloadTorrent(torFile);
+            Utiles util = new Utiles();
+            util.DeleteFile(torFile);
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
     }
-    public static void main(String[] args) throws TelegramApiException {
-        TorrentDownloadBot torrentDownloadBot = new TorrentDownloadBot();
-        TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-        botsApi.registerBot(torrentDownloadBot);
+    public void sendMessage(String chatId, String Message){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setText(Message);
+        sendMessage.setChatId(chatId);
+        try{
+            execute(sendMessage);
+        }catch (TelegramApiException e){
+            throw new RuntimeException(e);
+        }
+    }
+    public String getChatId(){
+        return chatId.toString();
+    }
+    public void ThreadReStart(){
+        DownloadThread dt = new DownloadThread();
+        dt.start();
     }
 }
