@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Download/DownloadThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Download/TorrentDownloadBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Torrent/DownloadTorrentFiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Utilities/utiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Git-2.44.0-64-bit.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Untitled.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/book.torrent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/jlibtorrent-1.2.19.0.dll" afterDir="false" />
-    </list>
+    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="fileDownload and torrent download successfull" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +18,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -178,9 +164,28 @@
       <option name="presentableId" value="Default" />
       <updated>1712635216055</updated>
     </task>
+    <task id="LOCAL-00001" summary="fileDownload and torrent download successfull">
+      <option name="closed" value="true" />
+      <created>1712768149615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712768149615</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fileDownload and torrent download successfull">
+      <option name="closed" value="true" />
+      <created>1712768359260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712768359260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fileDownload and torrent download successfull" />
+    <option name="LAST_COMMIT_MESSAGE" value="fileDownload and torrent download successfull" />
   </component>
 </project>
