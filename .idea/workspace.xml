@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="Merge remote-tracking branch 'github/master'" />
+    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="Merge remote-tracking branch 'github/master'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +82,7 @@
     "Application.TorrentDownloader (1).executor": "Run",
     "Application.TorrentDownloader (2).executor": "Run",
     "Application.TorrentDownloader.executor": "Run",
+    "Application.UploadBot.executor": "Run",
     "Application.Utiles (1).executor": "Run",
     "Application.Utiles (2).executor": "Run",
     "Application.Utiles (3).executor": "Run",
@@ -123,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Utiles (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Utilities.Utiles" />
+    <configuration name="UploadBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Film.Upload.UploadBot" />
       <module name="AAtel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Utilities.*" />
+          <option name="PATTERN" value="org.danukaji.Bot.Film.Upload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.UploadBot" />
         <item itemvalue="Application.Utiles" />
         <item itemvalue="Application.Utiles (4)" />
         <item itemvalue="Application.Utiles (3)" />
-        <item itemvalue="Application.Utiles (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712820250161</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'github/master'">
+      <option name="closed" value="true" />
+      <created>1712820284626</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712820284626</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
