@@ -6,12 +6,13 @@ import java.sql.SQLException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class Database {
-    private static final String url = "jbdc:mysql://127.0.0.1:3306/mysql";
-    private static String userName;
-    private static String password;
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/";
+    private static String USER;
+    private static String PASSWORD;
 
     public void DatabaseConnection() {
         Properties prop = new Properties();
@@ -20,14 +21,32 @@ public class Database {
             inputStream = new FileInputStream("config.properties");
             prop.load(inputStream);
 
-            userName = prop.getProperty("DB_USERNAME");
-            password = prop.getProperty("DB_PASSWORD");
-            System.out.println(userName + " " + password);
-            try (Connection connection = DriverManager.getConnection(url, userName, password)) {
-                connection.beginRequest();
-                System.out.println("Database Connected");
-            } catch (SQLException e) {
-                throw new IllegalStateException(e);
+            USER = prop.getProperty("DB_USERNAME");
+            PASSWORD = prop.getProperty("DB_PASSWORD");
+            System.out.println(USER + " " + PASSWORD);
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                    System.out.println("Connected to the database!");
+
+                    // Perform database operations here
+                    String CreateDatabaseQuery = "CREATE DATABASE IF NOT EXISTS dss_film";
+                    try (Statement statement = connection.createStatement()) {
+                        statement.executeUpdate(CreateDatabaseQuery);
+                    }
+                    connection.setCatalog("dss-films");
+                    String createTableQuery = "CREATE TABLE IF NOT EXIST users (id INT PRIMARY KE, name VARCHAR(45)";
+                    try (Statement statement = connection.createStatement()) {
+                        statement.executeUpdate(createTableQuery);
+                        System.out.println("Table 'example_table' created successfully!");
+                    }
+                } catch (SQLException e) {
+                    System.err.println("Connection failed!");
+                    e.printStackTrace();
+                }
+            } catch (ClassNotFoundException e) {
+                System.err.println("MySQL JDBC Driver not found!");
+                e.printStackTrace();
             }
         } catch (IOException e) {
             e.printStackTrace();

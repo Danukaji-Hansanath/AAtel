@@ -10,6 +10,8 @@ import com.frostwire.jlibtorrent.alerts.AlertType;
 import com.frostwire.jlibtorrent.alerts.BlockFinishedAlert;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 import org.danukaji.Bot.Film.Download.TorrentDownloadBot;
@@ -62,7 +64,10 @@ public final class DownloadTorrentFiles {
                         System.out.println("Torrent finished");
                         signal.countDown();
                         Utiles utils = new Utiles();
-                        utils.isFileExist("src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/~Get Your Files Here !/Bonus Resources.txt");
+                        List <String> utStr = utils.getFile(utils.getFolders("src/main/java/org/danukaji/Downloads/DownloadByTorrent"));
+                        for (String files: utStr){
+                            System.out.println(files);
+                        }
                         break;
                 }
             }
