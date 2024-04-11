@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="ReadMe update">
-      <change afterPath="$PROJECT_DIR$/src/external lib jar files/mysql-connector-j-8.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/Get Bonus Downloads Here.url" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/~Get Your Files Here !/Bonus Resources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/~Get Your Files Here !/UbuntuforNon-Geeks-RickfordGrant,PhilBull.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Torrent/DownloadTorrentFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Torrent/DownloadTorrentFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Utilities/Utiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Utilities/Utiles.java" afterDir="false" />
-    </list>
+    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="Merge remote-tracking branch 'github/master'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +87,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/libraries/mysql-connector-j-8.2.0.jar",
+    "last_opened_file_path": "D:/javaProjects/AAtel/lib",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -106,15 +96,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaProjects\AAtel\lib" />
       <recent name="D:\javaProjects\AAtel\src\external lib jar files" />
       <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji" />
       <recent name="D:\javaProjects\AAtel\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaProjects\AAtel\lib" />
+      <recent name="D:\javaProjects\AAtel" />
+      <recent name="D:\javaProjects\AAtel\src\lib" />
       <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji\Downloads\DownloadByTorrent\[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)" />
       <recent name="D:\javaProjects\AAtel\src\external lib jar files" />
-      <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji\Downloads\" />
-      <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -305,7 +297,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712803852904</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="libraries and other files">
+      <option name="closed" value="true" />
+      <created>1712819007416</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712819007416</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'github/master'">
+      <option name="closed" value="true" />
+      <created>1712820250161</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712820250161</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -330,6 +338,8 @@
     <MESSAGE value="add jar lib file" />
     <MESSAGE value="file exist, delete , and finder" />
     <MESSAGE value="ReadMe update" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReadMe update" />
+    <MESSAGE value="libraries and other files" />
+    <MESSAGE value="Merge remote-tracking branch 'github/master'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/master'" />
   </component>
 </project>

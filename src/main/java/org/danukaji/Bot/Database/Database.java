@@ -1,5 +1,7 @@
 package org.danukaji.Bot.Database;
 
+import org.apache.avro.reflect.Nullable;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -35,11 +37,13 @@ public class Database {
                         statement.executeUpdate(CreateDatabaseQuery);
                     }
                     connection.setCatalog("dss-films");
-                    String createTableQuery = "CREATE TABLE IF NOT EXIST users (id INT PRIMARY KE, name VARCHAR(45)";
+                    String createTableQuery = "CREATE TABLE IF NOT EXISTS users (id INT PRIMARY KEY, name VARCHAR(45))";
                     try (Statement statement = connection.createStatement()) {
                         statement.executeUpdate(createTableQuery);
-                        System.out.println("Table 'example_table' created successfully!");
+                        System.out.println("Users table' created successfully!");
                     }
+                    String createSuperUserTable = "CREATE TABLE IF NOT EXISTS super_user (id INT PRIMARY KEY, name VARCHAR(45))";
+
                 } catch (SQLException e) {
                     System.err.println("Connection failed!");
                     e.printStackTrace();
@@ -51,5 +55,15 @@ public class Database {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+}
+
+class createTables{
+    public void superUserTable(){
+
+    }
+    public void createTable(String tableName, @Nullable String Primary_key,
+                            @Nullable String col1, @Nullable String col2, @Nullable String col3, @Nullable String col4){
+
     }
 }
