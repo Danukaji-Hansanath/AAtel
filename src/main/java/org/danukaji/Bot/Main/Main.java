@@ -9,6 +9,7 @@ public class Main {
 
         ThreadGroup filmthreadGroup = new ThreadGroup("Film-Group");
         DownloadThread downloadThread = new DownloadThread();
+
         Thread nt = new Thread(filmthreadGroup,downloadThread,"Film-Download-Thread");
         nt.start();
 
