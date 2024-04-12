@@ -2,45 +2,63 @@ package org.danukaji.Bot.Database;
 
 import org.apache.avro.reflect.Nullable;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class Database {
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/dss_film";
     private static String USER;
     private static String PASSWORD;
 
-    public void DatabaseConnection() {
+    static {
         Properties prop = new Properties();
-        InputStream inputStream = null;
-        try {
-            inputStream = new FileInputStream("config.properties");
+        try (InputStream inputStream = new FileInputStream("config.properties")) {
             prop.load(inputStream);
-
             USER = prop.getProperty("DB_USERNAME");
             PASSWORD = prop.getProperty("DB_PASSWORD");
-            System.out.println(USER + " " + PASSWORD);
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
-                    System.out.println("Connected to the database!");
-                    connection.setCatalog("dss-films");
-                } catch (SQLException e) {
-                    System.err.println("Connection failed!");
-                    e.printStackTrace();
-                }
-            } catch (ClassNotFoundException e) {
-                System.err.println("MySQL JDBC Driver not found!");
-                e.printStackTrace();
-            }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    //Database search method
+    public ResultSet search(String query) {
+        ResultSet results = null;
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            String exq = query;
+            try (ResultSet resultSet = statement.executeQuery(query)) {
+                results = resultSet;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return results;
+    }
+
+    //Database insert data
+    public boolean insert(String query) {
+        try (Connection connection = Database.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            int rowsAffected = preparedStatement.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

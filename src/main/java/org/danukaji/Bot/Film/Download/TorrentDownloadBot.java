@@ -13,7 +13,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-
 import org.danukaji.Bot.Film.Torrent.DownloadTorrentFiles;
 public class TorrentDownloadBot extends TelegramLongPollingBot {
     private static String torFile;
@@ -43,7 +42,7 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
                 File file = execute(getFileRequest);
 
                 if (file != null) {
-                    downloadFile1(file.getFilePath(), document.getFileName());
+                    downloadFile1(file.getFilePath(), document.getFileName(), chatId);
                 } else {
                     System.out.println("Failed to get file information.");
                 }
@@ -54,7 +53,7 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
             }
         }
     }
-    public void downloadFile1(String filePath,String fileName) throws TelegramApiException, IOException {
+    public void downloadFile1(String filePath,String fileName, String chat_id) throws TelegramApiException, IOException {
         String fileUrl = "https://api.telegram.org/file/bot" + getBotToken() + "/" + filePath;
         torFile = "src/main/java/org/danukaji/Downloads/Torrents/"+fileName;
         try (InputStream inputStream = new URL(fileUrl).openStream();
@@ -65,7 +64,8 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
             while ((bytesRead = inputStream.read(buffer)) != -1) {
                 outputStream.write(buffer, 0, bytesRead);
             }
-            System.out.println("File downloaded successfully.");
+            String message = "bitTorrent file Downloaded";
+            sendMessage(chat_id,message);
             outputStream.close();
             DownloadTorrentFiles downloadTorrentFiles = new DownloadTorrentFiles();
             downloadTorrentFiles.DownloadTorrent(torFile);
@@ -92,4 +92,5 @@ public class TorrentDownloadBot extends TelegramLongPollingBot {
         DownloadThread dt = new DownloadThread();
         dt.start();
     }
+
 }

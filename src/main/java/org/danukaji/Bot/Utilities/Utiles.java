@@ -95,8 +95,17 @@ public class Utiles {
         }
         return filePath;
     }
-    public String fileFilter(List <String> files){
-        return "Success";
+    public List <String> fileFilter(List <String> files){
+        List <String> nFiles = new ArrayList<>();
+        for(String dir : files){
+            String[] videoExtensions = {".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".pdf",".exe"};
+            for(String extention:videoExtensions){
+                if(dir.toLowerCase().endsWith(extention)){
+                    nFiles.add(dir);
+                }
+            }
+        }
+        return nFiles;
     }
     public static int countFolder(String dirPath) {
         File dir = new File(dirPath);
@@ -117,6 +126,20 @@ public class Utiles {
         }
 
         return folderCount;
+    }
+    public String changeFileName(String filePath){
+        String fileName = null;
+        File file = new File(filePath);
+        fileName = file.getName();
+        System.out.println(fileName);
+        String newFileName = fileName.replaceAll("\\[YTS\\.MX\\]","[DSK.FILMS]");
+        File newFile =new File(file.getParent(),newFileName);
+        if(file.renameTo(newFile)){
+            System.out.println("File Rename Successfully....");
+        }else{
+            System.out.println("Failed to rename file....'");
+        }
+        return newFile.getAbsolutePath().toString();
     }
 
 }

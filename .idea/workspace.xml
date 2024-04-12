@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AAtel:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="Merge remote-tracking branch 'github/master'">
+    <list default="true" id="150cf147-d5dd-4658-ab82-7b8a465218e8" name="Changes" comment="localhost serveer success update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/Torrents/D83624D047049A5F65102FF83439E9A03F33FA7A.torrent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/test/Free_Test_Data_10MB_MOV.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/test/Free_Test_Data_5.21MB_MKV.mkv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/test/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Download/TorrentDownloadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Download/TorrentDownloadBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Torrent/DownloadTorrentFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Torrent/DownloadTorrentFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Film/Upload/UploadThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Utilities/Utiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Utilities/Utiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/Get Bonus Downloads Here.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/~Get Your Files Here !/Bonus Resources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/danukaji/Downloads/DownloadByTorrent/[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)/~Get Your Files Here !/UbuntuforNon-Geeks-RickfordGrant,PhilBull.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +69,14 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/danukaji/Bot/Main/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -89,16 +109,25 @@
     "Application.Utiles (4).executor": "Run",
     "Application.Utiles.executor": "Run",
     "Application.deleteFile.executor": "Run",
+    "Maven.AAtel [clean].executor": "Run",
+    "Maven.AAtel [compile].executor": "Run",
+    "Maven.AAtel [deploy].executor": "Run",
+    "Maven.AAtel [install].executor": "Run",
+    "Maven.AAtel [package].executor": "Run",
+    "Maven.AAtel [site].executor": "Run",
+    "Maven.AAtel [test].executor": "Run",
+    "Maven.AAtel [validate].executor": "Run",
+    "Maven.AAtel [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/javaProjects/AAtel/lib",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "D:/libraries/mysql-connector-j-8.2.0.jar",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -109,93 +138,18 @@
       <recent name="D:\javaProjects\AAtel\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji\Downloads\test" />
       <recent name="D:\javaProjects\AAtel\lib" />
       <recent name="D:\javaProjects\AAtel" />
       <recent name="D:\javaProjects\AAtel\src\lib" />
       <recent name="D:\javaProjects\AAtel\src\main\java\org\danukaji\Downloads\DownloadByTorrent\[ DevCourseWeb.com ] Ubuntu for Non-Geeks - A Pain-Free, Get-Things-Done Guide, 4th Edition (True PDF)" />
-      <recent name="D:\javaProjects\AAtel\src\external lib jar files" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Main.Main" />
-      <module name="AAtel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UploadBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Film.Upload.UploadBot" />
-      <module name="AAtel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Film.Upload.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Utiles (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Utilities.Utiles" />
-      <module name="AAtel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Utiles (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Utilities.Utiles" />
-      <module name="AAtel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Utiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.danukaji.Bot.Utilities.Utiles" />
-      <module name="AAtel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.danukaji.Bot.Utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.UploadBot" />
-        <item itemvalue="Application.Utiles" />
-        <item itemvalue="Application.Utiles (4)" />
-        <item itemvalue="Application.Utiles (3)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
       </set>
     </attachedChunks>
   </component>
